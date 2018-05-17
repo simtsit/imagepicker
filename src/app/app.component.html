@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>
+        {{ title }}
+      </h1>
+    </div>
+
+    <div class="col-md-12 text-center top20">
+      <p>Pick an image from the side menu.</p>
+    </div>
+
+      <div class="col-md-4 linedmargin">
+        <Strong>Image List:</Strong>
+        <ul class="nobulletlist">
+          <li *ngFor="let image of images">
+            <a href="#" (click)="changeImage(image.url)">{{image.name}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8 linedmargin">
+        <img src="{{targetImageUrl}}">
+      </div>
+    
+  </div>
+</div>
